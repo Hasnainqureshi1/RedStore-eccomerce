@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <!-- fonts  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <title>RedStore</title>
+</head>
+
+<body>
+
+    <div class="menu">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+          <img src="/images/logo.png" alt="RedStore" width="125px">
+          </a>
+        </div>
+
+        <nav>
+                  
+          
+              <ul id = "Menu-items" >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+             <!-- <li><a href="about.html">About</a></li> -->
+            <li><a href="contact.html">Contact</a></li> 
+            <li><a href="account.html">Account</a></li>
+          </ul>
+          
+        </nav>
+        <a href="cart.html">
+        <img src="images/cart.png" alt="cart" width="30px" height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+      </div>
+        
+        </div>
+       
+      <!-- account - page  -->
+     <div class="account-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/image1.png" alt="">
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">login</span>
+                <span onclick="register()"> Register</span>
+              
+              </div>
+                <div id="indicator"> 
+                  
+                </div>
+          
+              <form action="" id ="login">
+              <input type="text" placeholder="Username" name = "username" id = "username">
+              <input type="password"  placeholder ="password" name = "password" id = "username">
+                <button type="submit" class="btn" name = "login">Login</button>
+                <a href="">Forget Password</a>
+              </form>
+              <form action="" id = "register">
+              <input type="text" placeholder="Username" name = "username" id = "username">
+              <input type="email" name="email" id="mail" placeholder="Email">
+              <input type="password"  placeholder ="password" name = "password" id = "username">
+                <button type="submit" class="btn" name = "register">Register</button>
+                
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+   <!-- ----------- footer ----------  -->
+
+   <footer class="footer">
+     <div class="container">
+       <div class="row">
+         <div class="footer-col-1">
+           <h3>Download Our App</h3>
+           <p>Download App for Android and ios mobile phone.</p>
+           <div class="app-logo">
+             <img src="images/play-store.png" alt="">
+             <img src="images/app-store.png" alt="">
+           </div>
+
+         </div>
+         <div class="footer-col-2">
+           <img src="images/logo-white.png" alt="">
+           <p>Our purpose is to Sustainably Make the Pleasure and Benefits of sports Accesible to Many.</p>
+         </div>
+         <div class="footer-col-3">
+           <h3>Useful Links</h3>
+           <ul>
+            <li>Coupons</li>
+            <li>Blog Post</li>
+            <li>Return Policy</li>
+            <li>join Affiliate</li>  
+           </ul>
+         </div>
+         <div class="footer-col-4">
+           <h3>Follow Us</h3>
+           <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+              
+           </ul>
+         </div>
+          
+       </div>
+       <hr>
+       <p class="copyright">copyright 2021 - RedStore</p>
+     </div>
+
+   </footer>
+
+
+
+
+</body>
+
+</html>
+<script>
+  var menuitems  = document.getElementById("Menu-items");
+  menuitems.style.maxHeight = "0px";
+  function menutoggle(){
+    if( menuitems.style.maxHeight == "0px"){
+       menuitems.style.maxHeight = "200px";
+    }
+    else{
+       menuitems.style.maxHeight = "0px";
+    }
+  }
+</script>
+
+<!-- script for form  -->
+<script>
+var log = document.getElementById("login");
+var reg = document.getElementById("register");
+var indicator = document.getElementById("indicator");
+ function login(){
+   indicator.style.transform = "translateX(0px)";
+   log.style.transform = "translateX(300px)";
+   reg.style.transform = "translateX(300px)";
+ 
+ }
+ function register(){
+   indicator.style.transform = "translateX(150px)";
+    log.style.transform = "translateX(0px)";
+   reg.style.transform = "translateX(0px)";
+ 
+ }
+</script>
